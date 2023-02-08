@@ -11,5 +11,5 @@ Juan Diego Gil<br>
 Jefferson Arevalo<br>
 
 ### Cómo usarla <br>
-En el directorio del repositorio utilizar ejecute el comando `npm install` para instalar las dependencias, luego `npm start` para ejecutar la aplicación.<br>
+En el directorio del repositorio ejecute el comando `npm install` para instalar las dependencias, luego `npm start` para ejecutar la aplicación.<br>
 Entre a [http://localhost:3000](http://localhost:3000) para verla en su navegador.
