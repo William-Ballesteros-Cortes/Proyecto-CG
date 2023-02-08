@@ -6,6 +6,7 @@ function actionByKey(key) {
         KeyA: 'moveLeft',
         KeyD: 'moveRight',
         Space: 'jump',
+        KeyF: 'fly',
         Digit1: 'dirt',
         Digit2: 'grass',
         Digit3: 'glass',
@@ -23,6 +24,7 @@ export const useKeyboard = () => {
         moveLeft: false,
         moveRight: false,
         jump: false,
+        fly: false,
         texture1: false,
         texture2: false,
         texture3: false,
@@ -35,7 +37,7 @@ export const useKeyboard = () => {
         if(action) {
             setActions((prev) => {
                 return({
-                    ... prev,
+                    ...prev,
                     [action]: true
                 })
             })
@@ -47,7 +49,7 @@ export const useKeyboard = () => {
         if(action) {
             setActions((prev) => {
                 return({
-                    ... prev,
+                    ...prev,
                     [action]: false
                 })
             })

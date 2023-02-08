@@ -1,6 +1,6 @@
 import { useFrame, useThree } from "@react-three/fiber"
 import { useSphere } from "@react-three/cannon"
-import { meshBounds } from "@react-three/drei"
+// import { meshBounds } from "@react-three/drei"
 import { useEffect, useRef } from "react"
 import { Vector3 } from "three"
 import { useKeyboard } from "../hooks/useKeyboard"
@@ -9,7 +9,7 @@ const JUMP_FORCE = 3
 const SPEED = 4
 
 export const Player = () => {
-    const {moveForward, moveBackward, moveLeft, moveRight, jump} = useKeyboard()
+    const {moveForward, moveBackward, moveLeft, moveRight, jump, fly} = useKeyboard()
 
 
     const {camera} = useThree()
@@ -55,9 +55,14 @@ export const Player = () => {
         
         api.velocity.set(direction.x, vel.current[1], direction.z)
 
-        if (jump && Math.abs(vel.current[1] < 0.05)) {                          //consecuencias imprevistas, el jugador puede saltar mas de una vez
+        if (jump && Math.abs(vel.current[1]) < 0.05) {
             api.velocity.set(vel.current[0], JUMP_FORCE, vel.current[2])
         }
+
+        if (fly) {
+            api.velocity.set(vel.current[0], JUMP_FORCE, vel.current[2])
+        }
+        
     })
     return (
         <mesh ref={ref}></mesh>
