@@ -1,9 +1,15 @@
-# Proyecto-CG
-Proyecto Final del curso Computación Gráfica<br>
-Miembros:
+# Blockbuilder
+Proyecto final del curso de Computación Gráfica.<br>
+Aplicación 3D que imita funcionalidades del juego Minecraft.<br>
 
-William Alejandro Ballesteros Cortes 1841370<br>
+### Miembros:
+
+William Alejandro Ballesteros Cortes<br>
+Sara María Eraso<br>
+Juan Sebastián Estupiñán Cifuentes<br>
+Juan Diego Gil<br>
 Jefferson Arevalo<br>
 
-NOTAS DE EJECUCION <br>
-Acceda a la carpeta 'client' antes de utilizar el comando 'npm start' para ejecutar el servidor
+### Cómo usarla <br>
+En el directorio del repositorio utilizar ejecute el comando `npm install` para instalar las dependencias, luego `npm start` para ejecutar la aplicación.<br>
+Entre a [http://localhost:3000](http://localhost:3000) para verla en su navegador.
