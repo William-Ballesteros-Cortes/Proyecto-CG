@@ -25,37 +25,37 @@ export const useKeyboard = () => {
         moveRight: false,
         jump: false,
         fly: false,
-        texture1: false,
-        texture2: false,
-        texture3: false,
-        texture4: false,
-        texture5: false,
+        dirt: false,
+        grass: false,
+        glass: false,
+        wood: false,
+        log: false,
     })
 
     const handleKeyDown = useCallback((e) => {
         const action = actionByKey(e.code)
-        if(action) {
+        if (action) {
             setActions((prev) => {
-                return({
+                return ({
                     ...prev,
                     [action]: true
                 })
             })
         }
     }, [])
-    
+
     const handleKeyUp = useCallback((e) => {
         const action = actionByKey(e.code)
-        if(action) {
+        if (action) {
             setActions((prev) => {
-                return({
+                return ({
                     ...prev,
                     [action]: false
                 })
             })
         }
     }, [])
-    
+
 
     useEffect(() => {
         document.addEventListener('keydown', handleKeyDown)
